@@ -9,7 +9,16 @@ $(document).ready(function(){
 				client_secret: '8382d760513f97a0b61300c98679e0f98ae6b09a'
 			}
 		}).done(function(user){
-			console.log(user);
+			$('#profile').html(`
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				  	<h3>${user.name}</h3>
+				  </div>
+				  <div class="panel-body">
+				    Panel content
+				  </div>
+				</div>
+			`);
 		});
 	});
 });
